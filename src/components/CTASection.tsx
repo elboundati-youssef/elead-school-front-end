@@ -12,15 +12,19 @@ const CTASection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="gradient-primary rounded-3xl p-12 md:p-16 text-center"
+          className="gradient-primary rounded-3xl p-12 md:p-16 text-center relative overflow-hidden"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-4">
+          {/* Decorative circle */}
+          <div className="absolute -top-10 -end-10 w-40 h-40 rounded-full border-4 border-secondary/30" />
+          <div className="absolute -bottom-8 -start-8 w-32 h-32 rounded-full border-4 border-accent/20" />
+          
+          <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-4 relative z-10">
             {t.cta.title}
           </h2>
-          <p className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto relative z-10">
             {t.cta.subtitle}
           </p>
-          <button className="bg-secondary text-secondary-foreground px-8 py-4 rounded-2xl font-semibold text-lg inline-flex items-center gap-2 hover:opacity-90 transition-opacity">
+          <button className="bg-secondary text-secondary-foreground px-8 py-4 rounded-2xl font-semibold text-lg inline-flex items-center gap-2 hover:opacity-90 transition-opacity relative z-10">
             {t.cta.button}
             <ArrowRight className="w-5 h-5" />
           </button>
