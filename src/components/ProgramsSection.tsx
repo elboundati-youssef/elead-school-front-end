@@ -1,11 +1,11 @@
 import { useI18n } from "@/lib/i18n";
 import { motion } from "framer-motion";
-import { Lightbulb, Briefcase, Code } from "lucide-react";
+import { Lightbulb, Languages, Microscope } from "lucide-react";
 
 const programs = [
-  { icon: Lightbulb, color: "bg-secondary/20 text-secondary", key: "creative" as const },
-  { icon: Briefcase, color: "bg-accent/20 text-accent", key: "career" as const },
-  { icon: Code, color: "bg-primary/20 text-primary", key: "coding" as const },
+  { icon: Lightbulb, key: "creative" as const },
+  { icon: Languages, key: "career" as const },
+  { icon: Microscope, key: "coding" as const },
 ];
 
 const ProgramsSection = () => {
@@ -35,9 +35,9 @@ const ProgramsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15, duration: 0.5 }}
-                className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-hover transition-shadow cursor-pointer"
+                className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-hover transition-shadow cursor-pointer border border-secondary/20 hover:border-secondary/50"
               >
-                <div className={`w-14 h-14 rounded-2xl ${prog.color} flex items-center justify-center mb-4`}>
+                <div className="w-14 h-14 rounded-2xl bg-accent/20 text-accent flex items-center justify-center mb-4">
                   <Icon className="w-7 h-7" />
                 </div>
                 <h3 className="text-xl font-bold text-card-foreground mb-2">{title}</h3>
