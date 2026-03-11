@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const langLabels: Record<Language, string> = { fr: "FR", en: "EN", ar: "عر" };
 
-const sectionIds = ["about", "programs", "excellence", "features", "gallery", "contact"];
+const sectionIds = ["about", "programs", "excellence", "gallery","cta",  "contact"];
 
 const Navbar = () => {
   const { t, language, setLanguage } = useI18n();
@@ -25,8 +25,9 @@ const Navbar = () => {
     t.nav.about,
     t.nav.programs,
     t.nav.montessori,
-    t.nav.admissions,
     t.nav.gallery,
+    t.nav.admissions,
+   
     t.nav.contact,
   ];
 
