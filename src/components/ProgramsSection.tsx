@@ -14,14 +14,19 @@ const ProgramsSection = () => {
   return (
     <section id="programs" className="py-20 bg-primary">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
             {t.programs.title}
           </h2>
           <p className="text-primary-foreground/70 max-w-2xl mx-auto">
             {t.programs.subtitle}
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {programs.map((prog, i) => {
@@ -31,13 +36,14 @@ const ProgramsSection = () => {
             return (
               <motion.div
                 key={prog.key}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.15, duration: 0.5 }}
-                className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-hover transition-shadow cursor-pointer border border-secondary/20 hover:border-secondary/50"
+                transition={{ delay: i * 0.15, duration: 0.6 }}
+                whileHover={{ y: -8 }}
+                className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 cursor-pointer border border-secondary/20 hover:border-secondary/50 group"
               >
-                <div className="w-14 h-14 rounded-2xl bg-accent/20 text-accent flex items-center justify-center mb-4">
+                <div className="w-14 h-14 rounded-2xl bg-accent/20 text-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Icon className="w-7 h-7" />
                 </div>
                 <h3 className="text-xl font-bold text-card-foreground mb-2">{title}</h3>
