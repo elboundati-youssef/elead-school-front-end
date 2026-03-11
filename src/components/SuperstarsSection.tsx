@@ -17,26 +17,32 @@ const SuperstarsSection = () => {
   return (
     <section className="py-20 bg-muted">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-col sm:flex-row items-center justify-between mb-12 gap-4"
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             {t.superstars.title}
           </h2>
-          <button className="px-6 py-2 rounded-xl border border-primary text-primary font-semibold text-sm hover:bg-primary hover:text-primary-foreground transition-colors">
+          <button className="px-6 py-2.5 rounded-xl border-2 border-primary text-primary font-semibold text-sm hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-0.5">
             {t.superstars.viewAll}
           </button>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
           {superstars.map((s, i) => (
             <motion.div
               key={s.name}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.15 }}
-              className="bg-card rounded-2xl p-6 text-center shadow-card hover:shadow-card-hover transition-shadow"
+              transition={{ delay: i * 0.15, duration: 0.6 }}
+              whileHover={{ y: -8 }}
+              className="bg-card rounded-2xl p-6 text-center shadow-card hover:shadow-card-hover transition-all duration-300 group"
             >
-              <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-muted">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-muted border-4 border-secondary/30 group-hover:border-secondary transition-colors duration-300">
                 <img src={s.img} alt={s.name} className="w-full h-full object-cover" />
               </div>
               <h3 className="text-lg font-bold text-card-foreground">{s.name}</h3>
