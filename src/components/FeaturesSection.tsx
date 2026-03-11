@@ -8,7 +8,7 @@ const FeaturesSection = () => {
   const { t } = useI18n();
 
   return (
-    <section className="py-20">
+    <section id="features" className="py-20">
       <div className="container mx-auto px-4">
         {/* Traditional classroom */}
         <div className="flex flex-col lg:flex-row items-center gap-12 mb-20">

@@ -6,8 +6,16 @@ import heroKids from "@/assets/hero-kids.png";
 const HeroSection = () => {
   const { t } = useI18n();
 
+  const scrollToContact = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const openWhatsApp = () => {
+    window.open("https://wa.me/212668288041?text=Bonjour, je souhaite inscrire mon enfant à Elead School.", "_blank");
+  };
+
   return (
-    <section className="relative pt-24 pb-16 overflow-hidden">
+    <section id="about" className="relative pt-24 pb-16 overflow-hidden">
       {/* Decorative shapes */}
       <div className="absolute top-20 start-10 w-20 h-20 rounded-full bg-secondary/15 animate-float" />
       <div className="absolute top-40 end-20 w-14 h-14 rounded-full bg-accent/20 animate-bounce-slow" />
@@ -31,10 +39,21 @@ const HeroSection = () => {
             <p className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0">
               {t.hero.subtitle}
             </p>
-            <button className="bg-secondary text-secondary-foreground px-8 py-4 rounded-2xl font-semibold text-lg inline-flex items-center gap-2 hover:opacity-90 transition-opacity shadow-card-hover">
-              {t.hero.cta}
-              <ArrowRight className="w-5 h-5" />
-            </button>
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+              <button
+                onClick={openWhatsApp}
+                className="bg-secondary text-secondary-foreground px-8 py-4 rounded-2xl font-semibold text-lg inline-flex items-center gap-2 hover:opacity-90 transition-all shadow-card-hover hover:-translate-y-0.5"
+              >
+                {t.hero.cta}
+                <ArrowRight className="w-5 h-5" />
+              </button>
+              <button
+                onClick={scrollToContact}
+                className="border-2 border-primary text-primary px-8 py-4 rounded-2xl font-semibold text-lg inline-flex items-center gap-2 hover:bg-primary hover:text-primary-foreground transition-all hover:-translate-y-0.5"
+              >
+                {t.nav.contact}
+              </button>
+            </div>
 
             {/* Stats */}
             <div className="flex items-center gap-8 mt-10 justify-center lg:justify-start">
