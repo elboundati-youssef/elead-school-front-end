@@ -6,6 +6,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const langLabels: Record<Language, string> = { fr: "FR", en: "EN", ar: "عر" };
 
+const sectionIds = ["about", "programs", "excellence", "features", "contact", "contact"];
+
 const Navbar = () => {
   const { t, language, setLanguage } = useI18n();
   const { theme, toggleTheme } = useTheme();
@@ -21,6 +23,15 @@ const Navbar = () => {
     t.nav.contact,
   ];
 
+  const scrollTo = (index: number) => {
+    const id = sectionIds[index];
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    setMobileOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-4 flex items-center justify-between h-16">
@@ -30,14 +41,14 @@ const Navbar = () => {
 
         {/* Desktop nav */}
         <div className="hidden lg:flex items-center gap-6">
-          {navItems.map((item) => (
-            <a
+          {navItems.map((item, i) => (
+            <button
               key={item}
-              href="#"
+              onClick={() => scrollTo(i)}
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               {item}
-            </a>
+            </button>
           ))}
         </div>
 
@@ -112,14 +123,14 @@ const Navbar = () => {
             className="lg:hidden bg-card border-b border-border overflow-hidden"
           >
             <div className="container mx-auto px-4 py-4 flex flex-col gap-3">
-              {navItems.map((item) => (
-                <a
+              {navItems.map((item, i) => (
+                <button
                   key={item}
-                  href="#"
-                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2"
+                  onClick={() => scrollTo(i)}
+                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2 text-start"
                 >
                   {item}
-                </a>
+                </button>
               ))}
             </div>
           </motion.div>
