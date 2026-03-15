@@ -48,11 +48,17 @@ const ContactSection = () => {
               );
             })}
 
-            {/* Language flags */}
+            {/* Language flags - Corrigé pour s'afficher sur Windows et Desktop */}
             <div className="flex items-center justify-center gap-4 pt-4 border-t border-border">
-              <span className="text-2xl">🇫🇷</span>
-              <span className="text-2xl">🇬🇧</span>
-              <span className="text-2xl">🇲🇦</span>
+              <div className="overflow-hidden rounded-sm shadow-sm hover:scale-110 transition-transform cursor-pointer">
+                <img src="https://flagcdn.com/w40/fr.png" alt="Français" className="w-8 h-auto" />
+              </div>
+              <div className="overflow-hidden rounded-sm shadow-sm hover:scale-110 transition-transform cursor-pointer">
+                <img src="https://flagcdn.com/w40/gb.png" alt="English" className="w-8 h-auto" />
+              </div>
+              <div className="overflow-hidden rounded-sm shadow-sm hover:scale-110 transition-transform cursor-pointer">
+                <img src="https://flagcdn.com/w40/ma.png" alt="Maroc" className="w-8 h-auto" />
+              </div>
             </div>
           </div>
         </motion.div>

@@ -14,20 +14,28 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
+      {/* Navbar agit comme l'en-tête (idéalement, elle utilise la balise <header> à l'intérieur de son propre composant) */}
       <Navbar />
-      <HeroSection />
-      <ProgramsSection />
-      <ExcellenceSection />
-      <FeaturesSection />
-      <GallerySection />
-      <SuperstarsSection />
-      <TestimonialsSection />
-      <FAQSection />
-      <CTASection />
-      <ContactSection />
+
+      {/* La balise <main> est cruciale pour le SEO. Elle dit à Google : "Voici le vrai contenu de la page !" */}
+      <main className="flex-grow" id="main-content">
+        <HeroSection />
+        <ProgramsSection />
+        <ExcellenceSection />
+        <FeaturesSection />
+        <GallerySection />
+        <SuperstarsSection />
+        <TestimonialsSection />
+        <FAQSection />
+        <CTASection />
+        <ContactSection />
+      </main>
       
+      {/* Footer (idéalement, ce composant utilise la balise <footer>) */}
       <FooterSection />
+      
+      {/* Les boutons flottants ou widgets doivent rester en dehors de <main> car ce n'est pas du contenu texte pertinent pour Google */}
       <WhatsAppButton />
     </div>
   );

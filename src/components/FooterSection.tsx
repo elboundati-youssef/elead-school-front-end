@@ -48,9 +48,9 @@ const FooterSection = () => {
               <p>{t.programs.coding}</p>
             </div>
             <div className="flex items-center gap-3 mt-4">
-              <span className="text-xl">🇫🇷</span>
-              <span className="text-xl">🇬🇧</span>
-              <span className="text-xl">🇲🇦</span>
+              <img src="https://flagcdn.com/w40/fr.png" alt="Français" className="w-8 h-auto" />
+               <img src="https://flagcdn.com/w40/gb.png" alt="English" className="w-8 h-auto" />
+               <img src="https://flagcdn.com/w40/ma.png" alt="Maroc" className="w-8 h-auto" />
             </div>
           </div>
         </div>
