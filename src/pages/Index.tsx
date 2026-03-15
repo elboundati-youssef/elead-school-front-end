@@ -14,7 +14,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-background flex flex-col overflow-x-hidden w-full">
       {/* Navbar agit comme l'en-tête (idéalement, elle utilise la balise <header> à l'intérieur de son propre composant) */}
       <Navbar />
 
