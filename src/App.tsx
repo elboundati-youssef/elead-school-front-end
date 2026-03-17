@@ -7,6 +7,7 @@ import { I18nProvider } from "@/lib/i18n";
 import { ThemeProvider } from "@/lib/theme";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import SuperstarsPage from "./pages/SuperstarsPage.tsx";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="*" element={<NotFound />} />
+              <Route path="/superstars" element={<SuperstarsPage />} />
             </Routes>
           </BrowserRouter>
         </TooltipProvider>

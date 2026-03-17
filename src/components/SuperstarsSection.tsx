@@ -4,6 +4,7 @@ import { Star } from "lucide-react";
 import student1 from "@/assets/student1.png";
 import student2 from "@/assets/student2.png";
 import student3 from "@/assets/student3.png";
+import { Link } from "react-router-dom";
 
 const superstars = [
   { name: "Ayoub Khan", role: "Best Reader", img: student1 },
@@ -26,9 +27,12 @@ const SuperstarsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             {t.superstars.title}
           </h2>
-          <button className="px-6 py-2.5 rounded-xl border-2 border-primary text-primary font-semibold text-sm hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-0.5">
+          <Link 
+            to="/superstars" 
+            className="inline-block px-6 py-2.5 rounded-xl border-2 border-primary text-primary font-semibold text-sm hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 text-center"
+          >
             {t.superstars.viewAll}
-          </button>
+          </Link>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
