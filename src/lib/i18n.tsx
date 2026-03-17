@@ -105,8 +105,9 @@ const translations = {
       instagram: "@elead.schooltanger",
     },
     footer: {
-      rights: "© 2025 Elead School. All rights reserved.",
+      rights: "All rights reserved.",
       description: "School of elites, school of leaders — 100% Montessori Pedagogy in Tanger.",
+      createdBy: "Created by"
     },
   },
   fr: {
@@ -211,8 +212,9 @@ const translations = {
       instagram: "@elead.schooltanger",
     },
     footer: {
-      rights: "© 2025 Elead School. Tous droits réservés.",
+      rights: "Tous droits réservés.",
       description: "École des élites, école des leaders — 100% Pédagogie Montessori à Tanger.",
+    createdBy: "Créé par"
     },
   },
   ar: {
@@ -317,8 +319,9 @@ const translations = {
       instagram: "@elead.schooltanger",
     },
     footer: {
-      rights: "© 2025 مدرسة إيليد. جميع الحقوق محفوظة.",
+      rights: "جميع الحقوق محفوظة.",
       description: "مدرسة النخبة، مدرسة القادة — بيداغوجيا مونتيسوري 100% في طنجة.",
+    createdBy: "تم الإنشاء بواسطة"
     },
   },
 };

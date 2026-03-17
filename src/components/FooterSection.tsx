@@ -3,6 +3,8 @@ import { MapPin, Phone, Mail, Instagram } from "lucide-react";
 
 const FooterSection = () => {
   const { t } = useI18n();
+  // Année dynamique (passera automatiquement à 2026, 2027...)
+  const currentYear = new Date().getFullYear(); 
 
   return (
     <footer className="gradient-primary py-12">
@@ -48,14 +50,29 @@ const FooterSection = () => {
               <p>{t.programs.coding}</p>
             </div>
             <div className="flex items-center gap-3 mt-4">
-              <img src="https://flagcdn.com/w40/fr.png" alt="Français" className="w-8 h-auto" />
-               <img src="https://flagcdn.com/w40/gb.png" alt="English" className="w-8 h-auto" />
-               <img src="https://flagcdn.com/w40/ma.png" alt="Maroc" className="w-8 h-auto" />
+              <img src="https://flagcdn.com/w40/fr.png" alt="Français" className="w-8 h-auto rounded-sm shadow-sm" />
+               <img src="https://flagcdn.com/w40/gb.png" alt="English" className="w-8 h-auto rounded-sm shadow-sm" />
+               <img src="https://flagcdn.com/w40/ma.png" alt="Maroc" className="w-8 h-auto rounded-sm shadow-sm" />
             </div>
           </div>
         </div>
-        <div className="border-t border-primary-foreground/20 pt-6 text-center">
-          <p className="text-primary-foreground/60 text-sm">{t.footer.rights}</p>
+
+        {/* 👇 Nouvelle section Copyright et Signature Conceptify Pro */}
+        <div className="border-t border-primary-foreground/20 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-primary-foreground/60 text-sm text-center md:text-left">
+            © {currentYear} Elead School. {t.footer.rights}
+          </p>
+          <p className="text-primary-foreground/60 text-sm text-center md:text-right">
+            {t.footer.createdBy}{" "}
+            <a 
+              href="https://conceptify.pro/"
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="font-bold text-primary-foreground hover:text-secondary transition-colors duration-300"
+            >
+              Conceptify Pro
+            </a>
+          </p>
         </div>
       </div>
     </footer>
