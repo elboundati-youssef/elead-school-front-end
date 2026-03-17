@@ -8,7 +8,7 @@ const ContactSection = () => {
   const contactItems = [
     { icon: Phone, value: t.contact.phone, href: "tel:+212668288041" },
     { icon: Mail, value: t.contact.email, href: "mailto:eleadschool1@gmail.com" },
-    { icon: MapPin, value: t.contact.address, href: "#" },
+    { icon: MapPin, value: t.contact.address, href: "https://maps.app.goo.gl/Hds7Lq2NAjV7gZh3A" },
     { icon: Instagram, value: t.contact.instagram, href: "https://instagram.com/elead.schooltanger" },
   ];
 
