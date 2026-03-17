@@ -26,9 +26,11 @@ const allSuperstars = [
 
 const SuperstarsPage = () => {
   const { t } = useI18n();
-useEffect(() => {
+
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div className="min-h-screen bg-background flex flex-col overflow-x-hidden w-full">
       <Navbar />
@@ -44,7 +46,6 @@ useEffect(() => {
                 className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-4"
               >
                 <ArrowLeft className="w-4 h-4 rtl:rotate-180" />
-                {/* Remplace par t.common.back si tu l'as dans tes traductions */}
                 <span>Retour à l'accueil</span> 
               </Link>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground">
@@ -56,8 +57,8 @@ useEffect(() => {
             </div>
           </div>
 
-          {/* Grille complète des élèves */}
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {/* 👇 Grille optimisée : grid-cols-2 sur mobile, gap-4 sur mobile */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
             {allSuperstars.map((s, i) => (
               <motion.div
                 key={i}
@@ -65,16 +66,22 @@ useEffect(() => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: i * 0.1, duration: 0.4 }}
                 whileHover={{ y: -8 }}
-                className="bg-card rounded-2xl p-6 text-center shadow-card hover:shadow-card-hover transition-all duration-300 group border border-border/50"
+                // 👇 p-4 sur mobile pour gagner de la place, p-6 sur desktop
+                className="bg-card rounded-2xl p-4 md:p-6 text-center shadow-card hover:shadow-card-hover transition-all duration-300 group border border-border/50"
               >
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-muted border-4 border-secondary/30 group-hover:border-secondary transition-colors duration-300">
+                {/* 👇 Image w-16 h-16 sur mobile, w-24 h-24 sur desktop */}
+                <div className="w-16 h-16 md:w-24 md:h-24 mx-auto mb-3 md:mb-4 rounded-full overflow-hidden bg-muted border-4 border-secondary/30 group-hover:border-secondary transition-colors duration-300">
                   <img src={s.img} alt={s.name} className="w-full h-full object-cover" />
                 </div>
-                <h3 className="text-lg font-bold text-card-foreground">{s.name}</h3>
-                <p className="text-sm text-muted-foreground mb-3">{s.role}</p>
-                <div className="flex justify-center gap-1">
+                
+                {/* 👇 Textes adaptés pour le mobile avec line-clamp pour éviter les débordements */}
+                <h3 className="text-base md:text-lg font-bold text-card-foreground line-clamp-1">{s.name}</h3>
+                <p className="text-xs md:text-sm text-muted-foreground mb-2 md:mb-3 line-clamp-1">{s.role}</p>
+                
+                {/* 👇 Étoiles légèrement plus petites et rapprochées sur mobile */}
+                <div className="flex justify-center gap-0.5 md:gap-1">
                   {[...Array(5)].map((_, j) => (
-                    <Star key={j} className="w-4 h-4 fill-secondary text-secondary" />
+                    <Star key={j} className="w-3 h-3 md:w-4 md:h-4 fill-secondary text-secondary" />
                   ))}
                 </div>
               </motion.div>
