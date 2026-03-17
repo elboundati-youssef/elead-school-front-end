@@ -94,6 +94,7 @@ const translations = {
     cta: {
       title: "Give Your Child the Best Start",
       subtitle: "Join Elead School — 100% Montessori Pedagogy in Tanger.",
+      subtitlemobile :"Join Elead School \n 100% Montessori Pedagogy\n in Tanger.",
       button: "Enroll Now",
     },
     contact: {
@@ -199,6 +200,7 @@ const translations = {
     cta: {
       title: "Offrez à Votre Enfant le Meilleur Départ",
       subtitle: "Rejoignez Elead School — 100% Pédagogie Montessori à Tanger.",
+      subtitlemobile :"Rejoignez Elead School \n 100% Pédagogie Montessori\n à Tanger.",
       button: "Inscrire Mon Enfant",
     },
     contact: {
@@ -304,6 +306,7 @@ const translations = {
     cta: {
       title: "امنح طفلك أفضل بداية",
       subtitle: "انضم إلى مدرسة إيليد — بيداغوجيا مونتيسوري 100% في طنجة.",
+      subtitlemobile :"انضم إلى مدرسة إيليد \n بيداغوجيا مونتيسوري 100% \nفي طنجة.",
       button: "سجّل طفلك الآن",
     },
     contact: {

@@ -24,8 +24,14 @@ const CTASection = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-4 relative z-10">
             {t.cta.title}
           </h2>
-          <p className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto relative z-10">
-            {t.cta.subtitle}
+          <p className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto relative z-10 whitespace-pre-line">
+           
+             <span className="block md:hidden">
+                 {t.cta.subtitlemobile}
+              </span>
+              <span className="hidden md:block">
+                 {t.cta.subtitle}
+              </span>
           </p>
           <button
             onClick={openWhatsApp}
