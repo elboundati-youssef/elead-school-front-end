@@ -33,11 +33,17 @@ const HeroSection = () => {
             <p className="font-script text-xl sm:text-2xl md:text-3xl text-accent mb-3">
               {t.hero.slogan}
             </p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight mb-4 whitespace-pre-line">
               {t.hero.title}
             </h1>
-            <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0">
-              {t.hero.subtitle}
+            <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0 whitespace-pre-line">
+
+              <span className="block md:hidden">
+                {t.hero.subtitlemobile}
+              </span>
+              <span className="hidden md:block">
+                {t.hero.subtitle}
+              </span>
             </p>
             <div className="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start">
               <button

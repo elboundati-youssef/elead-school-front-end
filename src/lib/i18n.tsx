@@ -14,8 +14,9 @@ const translations = {
     },
     hero: {
       slogan: "School of elites, school of leaders",
-      title: "Registrations Open 2025-2026",
-      subtitle: "100% Montessori Pedagogy — Preschool & Primary. Give your child a premium education in Tanger.",
+      title: "Registrations Open \n2025-2026",
+      subtitle: "100% Montessori Pedagogy — Preschool & Primary.\n Give your child a premium education in Tanger.",
+      subtitlemobile: "100% Montessori Pedagogy \n Preschool & Primary. \nGive your child a premium \neducation in Tanger.",
       cta: "Enroll Now",
       stats1: "100%",
       stats1Label: "Montessori Pedagogy",
@@ -119,7 +120,8 @@ const translations = {
     hero: {
       slogan: "École des élites, école des leaders",
       title: "Inscriptions Ouvertes 2025-2026",
-      subtitle: "100% Pédagogie Montessori — Maternelle & Primaire. Offrez à votre enfant une éducation premium à Tanger.",
+      subtitle: "100% Pédagogie Montessori — Maternelle & Primaire. \nOffrez à votre enfant une éducation premium à Tanger.",
+      subtitlemobile:"100% Pédagogie Montessori \n Maternelle & Primaire.\n Offrez à votre enfant une éducation\n premium à Tanger.",
       cta: "Inscrire Mon Enfant",
       stats1: "100%",
       stats1Label: "Pédagogie Montessori",
@@ -223,7 +225,8 @@ const translations = {
     hero: {
       slogan: "مدرسة النخبة، مدرسة القادة",
       title: "التسجيل مفتوح 2025-2026",
-      subtitle: "بيداغوجيا مونتيسوري 100% — حضانة وابتدائي. امنح طفلك تعليمًا متميزًا في طنجة.",
+      subtitle: "بيداغوجيا مونتيسوري 100% — حضانة وابتدائي. \nامنح طفلك تعليمًا متميزًا في طنجة.",
+       subtitlemobile: "بيداغوجيا مونتيسوري 100% — حضانة وابتدائي. \nامنح طفلك تعليمًا متميزًا في طنجة.",
       cta: "سجّل طفلك الآن",
       stats1: "100%",
       stats1Label: "بيداغوجيا مونتيسوري",
