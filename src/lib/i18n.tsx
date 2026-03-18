@@ -109,6 +109,19 @@ const translations = {
       description: "School of elites, school of leaders — 100% Montessori Pedagogy in Tanger.",
       createdBy: "Created by"
     },
+    instagram: {
+    title: "Experience",
+    highlight: "Elead",
+    description: "Dive into the daily lives of our students. Moments of learning, joy, and discovery, captured live.",
+    followUs: "Follow us",
+    followUsMobile: "Follow us on Instagram",
+    openInApp: "Open in App",
+    viewOnIg: "View on Instagram",
+    video1: "Everyday Excellence",
+    video2: "Montessori Method",
+    video3: "Awakening & Games",
+    video4: "Creativity"
+  },
   },
   fr: {
     nav: {
@@ -216,6 +229,19 @@ const translations = {
       description: "École des élites, école des leaders — 100% Pédagogie Montessori à Tanger.",
     createdBy: "Créé par"
     },
+    instagram: {
+    title: "Vivez l'expérience",
+    highlight: "Elead",
+    description: "Plongez dans le quotidien de nos élèves. Des moments d'apprentissage, de joie et de découverte, capturés sur le vif.",
+    followUs: "Nous suivre",
+    followUsMobile: "Nous suivre sur Instagram",
+    openInApp: "Ouvrir dans l'app",
+    viewOnIg: "Voir sur Instagram",
+    video1: "L'excellence au quotidien",
+    video2: "Méthode Montessori",
+    video3: "Éveil & Jeux",
+    video4: "Créativité"
+  },
   },
   ar: {
     nav: {
@@ -323,6 +349,19 @@ const translations = {
       description: "مدرسة النخبة، مدرسة القادة — بيداغوجيا مونتيسوري 100% في طنجة.",
     createdBy: "تم الإنشاء بواسطة"
     },
+    instagram: {
+    title: "عيشوا تجربة",
+    highlight: "إيليد",
+    description: "اكتشفوا الحياة اليومية لطلابنا. لحظات من التعلم والفرح والاكتشاف، ملتقطة مباشرة.",
+    followUs: "تابعنا",
+    followUsMobile: "تابعنا على إنستغرام",
+    openInApp: "افتح في التطبيق",
+    viewOnIg: "شاهد على إنستغرام",
+    video1: "التميز اليومي",
+    video2: "منهج منتسوري",
+    video3: "ألعاب وتنمية",
+    video4: "إبداع"
+  },
   },
 };
 

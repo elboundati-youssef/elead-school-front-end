@@ -1,9 +1,9 @@
 import { useI18n } from "@/lib/i18n";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
-import student1 from "@/assets/student1.png";
-import student2 from "@/assets/student2.png";
-import student3 from "@/assets/student3.png";
+import student1 from "@/assets/student1.jpg";
+import student2 from "@/assets/student2.jpg";
+import student3 from "@/assets/student3.jpg";
 import { Link } from "react-router-dom";
 
 const superstars = [

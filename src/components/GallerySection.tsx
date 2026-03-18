@@ -5,17 +5,17 @@ import { X } from "lucide-react"; // Importation de l'icône de fermeture
 
 import classroomImg from "@/assets/classroom.jpg";
 import quizImg from "@/assets/quiz-game.jpg";
-import heroKids from "@/assets/hero-kids.png";
-import student1 from "@/assets/student1.png";
-import student2 from "@/assets/student2.png";
-import student3 from "@/assets/student3.png";
+import heroKids from "@/assets/img7718.jpg";
+import student1 from "@/assets/student1.jpg";
+import student2 from "@/assets/student2.jpg";
+import student3 from "@/assets/student3.jpg";
 
 const galleryImages = [
   { src: classroomImg, alt: "Montessori classroom", span: "md:col-span-2 md:row-span-2" },
-  { src: heroKids, alt: "Happy students", span: "" },
+  { src: student2, alt: "Creative activities", span: "" },
   { src: quizImg, alt: "Interactive activities", span: "" },
   { src: student1, alt: "Student learning", span: "" },
-  { src: student2, alt: "Creative activities", span: "md:col-span-2" },
+  { src: heroKids, alt: "Happy students", span: "md:col-span-2" },
   { src: student3, alt: "Student achievement", span: "" },
 ];
 
