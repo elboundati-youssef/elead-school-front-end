@@ -101,7 +101,7 @@ const translations = {
       title: "Contact Us",
       phone: "+212 6 68 28 80 41 / 42",
       email: "eleadschool1@gmail.com",
-      address: "Al-mowaddifine, près du centre de dialyse, Tanger",
+      address: "Near the dialysis center and opposite the Petrom gas station, Lot Al Boughaz, Route de Rabat, Tangier.",
       instagram: "@elead.schooltanger",
     },
     footer: {
@@ -221,7 +221,7 @@ const translations = {
       title: "Contactez-nous",
       phone: "+212 6 68 28 80 41 / 42",
       email: "eleadschool1@gmail.com",
-      address: "Al-mowaddifine, près du centre de dialyse, Tanger",
+      address: "Près du centre de dialyse et en face de la station Petrom, Lot. Al Boughaz, Route de Rabat, Tanger.",
       instagram: "@elead.schooltanger",
     },
     footer: {
@@ -341,7 +341,7 @@ const translations = {
       title: "اتصل بنا",
       phone: "+212 6 68 28 80 41 / 42",
       email: "eleadschool1@gmail.com",
-      address: "الموظفين، بالقرب من مركز غسيل الكلى، طنجة",
+      address: "بالقرب من مركز تصفية الدم ومقابل محطة بتروم، تجزئة البوغاز، طريق الرباط، طنجة.",
       instagram: "@elead.schooltanger",
     },
     footer: {
