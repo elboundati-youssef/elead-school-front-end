@@ -8,16 +8,17 @@ import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 
 // Importe tes images ici
-import student1 from "@/assets/student1.jpg";
-import student2 from "@/assets/student2.jpg";
+import student1 from "@/assets/student2.jpg";
+import student2 from "@/assets/student1.jpg";
 import student3 from "@/assets/student3-t.jpg";
+import student4 from "@/assets/etudiants5-t.jpg";
 
 // Plus de données pour la page complète
 const allSuperstars = [
-  { name: "Ayoub Khan", role: "Best Reader", img: student1 },
-  { name: "Lina Fez", role: "Top Scorer", img: student2 },
-  { name: "Hamza Mo", role: "Most Creative", img: student3 },
-
+   { name: "Ayoub Khan", role: "Best Reader", img: student2 },
+  { name: "Lina Fez", role: "Top Scorer", img: student1 },
+  { name: "Sara Ali", role: "Most Creative", img: student3 },
+  { name: "Hamza Mo", role: "Math Genius", img: student4 }, 
 ];
 
 const SuperstarsPage = () => {

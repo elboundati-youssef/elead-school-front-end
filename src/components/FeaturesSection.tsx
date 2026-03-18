@@ -1,7 +1,7 @@
 import { useI18n } from "@/lib/i18n";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
-import classroomImg from "@/assets/espace5-t.jpg";
+import classroomImg from "@/assets/montesori-t.jpg";
 import quizImg from "@/assets/quiz-game-t.jpg";
 
 const FeaturesSection = () => {

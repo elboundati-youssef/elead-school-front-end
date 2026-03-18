@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react"; // Importation de l'icône de fermeture
 
 import classroomImg from "@/assets/classroom-t.jpg";
-import quizImg from "@/assets/quiz-game-t.jpg";
+import quizImg from "@/assets/espase6-t.jpg";
 import heroKids from "@/assets/img7718-t.jpg";
 import student1 from "@/assets/espace1-t.jpg";
 import student2 from "@/assets/espace2-t.jpg";
