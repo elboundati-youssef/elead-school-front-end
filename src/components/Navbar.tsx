@@ -160,9 +160,11 @@ const Navbar = () => {
             className="lg:hidden fixed top-0 bottom-0 end-0 w-72 bg-card/95 backdrop-blur-xl border-s border-border shadow-2xl z-[70] flex flex-col"
           >
             <div className="flex items-center justify-between p-4 border-b border-border">
-              <span className="font-display text-lg font-bold text-primary">
-                ELEAD<span className="text-secondary"> School</span>
-              </span>
+              <img
+              src={logoImg}
+              alt="Logo Elead School"
+              className="h-12 md:h-14 w-auto object-contain"
+            />
               <button
                 onClick={() => setMobileOpen(false)}
                 className="p-2 rounded-xl text-muted-foreground hover:text-primary hover:bg-muted transition-colors"

@@ -11,7 +11,7 @@ import ContactSection from "@/components/ContactSection";
 import CTASection from "@/components/CTASection";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
-
+import InstagramSection from "@/components/InstagramSection";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col overflow-x-hidden w-full">
@@ -22,7 +22,9 @@ const Index = () => {
       <main className="flex-grow" id="main-content">
         <HeroSection />
         <ProgramsSection />
+        <InstagramSection />
         <ExcellenceSection />
+        
         <FeaturesSection />
         <GallerySection />
         <SuperstarsSection />
