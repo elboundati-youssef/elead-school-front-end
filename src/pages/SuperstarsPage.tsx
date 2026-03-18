@@ -10,7 +10,7 @@ import FooterSection from "@/components/FooterSection";
 // Importe tes images ici
 import student1 from "@/assets/student1.jpg";
 import student2 from "@/assets/student2.jpg";
-import student3 from "@/assets/student3.jpg";
+import student3 from "@/assets/student3-t.jpg";
 
 // Plus de données pour la page complète
 const allSuperstars = [

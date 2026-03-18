@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 import student1 from "@/assets/student1.jpg";
 import student2 from "@/assets/student2.jpg";
-import student3 from "@/assets/student3.jpg";
+import student3 from "@/assets/student3-t.jpg";
 import { Link } from "react-router-dom";
 
 const superstars = [

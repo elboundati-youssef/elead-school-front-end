@@ -3,20 +3,25 @@ import { useI18n } from "@/lib/i18n";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react"; // Importation de l'icône de fermeture
 
-import classroomImg from "@/assets/classroom.jpg";
-import quizImg from "@/assets/quiz-game.jpg";
-import heroKids from "@/assets/img7718.jpg";
-import student1 from "@/assets/student1.jpg";
-import student2 from "@/assets/student2.jpg";
-import student3 from "@/assets/student3.jpg";
+import classroomImg from "@/assets/classroom-t.jpg";
+import quizImg from "@/assets/quiz-game-t.jpg";
+import heroKids from "@/assets/img7718-t.jpg";
+import student1 from "@/assets/espace1-t.jpg";
+import student2 from "@/assets/espace2-t.jpg";
+import student3 from "@/assets/espace3-t.jpg";
+import espace4 from "@/assets/espace4.jpg";
+import espace5 from "@/assets/espace5-t.jpg";
 
 const galleryImages = [
   { src: classroomImg, alt: "Montessori classroom", span: "md:col-span-2 md:row-span-2" },
   { src: student2, alt: "Creative activities", span: "" },
   { src: quizImg, alt: "Interactive activities", span: "" },
   { src: student1, alt: "Student learning", span: "" },
+  { src: espace5, alt: "Student achievement", span: "" },
   { src: heroKids, alt: "Happy students", span: "md:col-span-2" },
   { src: student3, alt: "Student achievement", span: "" },
+  { src: espace4, alt: "Student achievement", span: "" },
+  
 ];
 
 const GallerySection = () => {

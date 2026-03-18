@@ -1,7 +1,7 @@
 import { useI18n } from "@/lib/i18n";
 import { motion } from "framer-motion";
 import { ArrowRight, BookOpen, Languages } from "lucide-react";
-import heroKids from "@/assets/img7718.jpg";
+import heroKids from "@/assets/img7718-t.jpg";
 
 const HeroSection = () => {
   const { t } = useI18n();
