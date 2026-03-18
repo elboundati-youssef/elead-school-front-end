@@ -15,7 +15,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="about" className="relative pt-24 pb-16 overflow-hidden">
+    <section id="about" className="relative pt-24 pb-16 min-h-[98vh] flex items-center overflow-hidden">
       {/* Decorative shapes */}
       <div className="absolute top-20 start-10 w-20 h-20 rounded-full bg-secondary/15 animate-float" />
       <div className="absolute top-40 end-20 w-14 h-14 rounded-full bg-accent/20 animate-bounce-slow" />

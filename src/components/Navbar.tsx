@@ -3,6 +3,7 @@ import { useTheme } from "@/lib/theme";
 import { Sun, Moon, Globe, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoImg from "@/assets/logo2222.png";
 
 const langLabels: Record<Language, string> = { fr: "FR", en: "EN", ar: "عر" };
 
@@ -42,15 +43,18 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
-          scrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${scrolled
             ? "bg-background/70 backdrop-blur-xl border-border shadow-lg"
             : "bg-background/90 backdrop-blur-md border-transparent"
-        }`}
+          }`}
       >
         <div className="container mx-auto px-4 flex items-center justify-between h-16">
-          <a href="/" className="font-display text-2xl font-bold text-primary">
-            ELEAD<span className="text-secondary"> School</span>
+          <a href="/" className="flex items-center hover:opacity-90 transition-opacity">
+            <img
+              src={logoImg}
+              alt="Logo Elead School"
+              className="h-12 md:h-14 w-auto object-contain"
+            />
           </a>
 
           {/* Desktop nav */}
@@ -92,11 +96,10 @@ const Navbar = () => {
                           setLanguage(lang);
                           setLangOpen(false);
                         }}
-                        className={`block w-full px-4 py-2.5 text-sm text-start hover:bg-muted transition-colors ${
-                          language === lang
+                        className={`block w-full px-4 py-2.5 text-sm text-start hover:bg-muted transition-colors ${language === lang
                             ? "text-primary font-bold bg-primary/5"
                             : "text-foreground"
-                        }`}
+                          }`}
                       >
                         {langLabels[lang]}
                       </button>
@@ -120,14 +123,14 @@ const Navbar = () => {
 
             {/* Mobile menu button */}
             <button
-  type="button"
-  onClick={(e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setMobileOpen(!mobileOpen);
-  }}
-  className="lg:hidden p-2 rounded-xl text-muted-foreground hover:text-primary hover:bg-muted transition-all duration-200"
->
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setMobileOpen(!mobileOpen);
+              }}
+              className="lg:hidden p-2 rounded-xl text-muted-foreground hover:text-primary hover:bg-muted transition-all duration-200"
+            >
               {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
@@ -146,7 +149,7 @@ const Navbar = () => {
             className="lg:hidden fixed inset-0 bg-foreground/20 backdrop-blur-sm z-[60]"
           />
         )}
-        
+
         {mobileOpen && (
           <motion.div
             key="mobile-menu-panel"
@@ -170,17 +173,17 @@ const Navbar = () => {
             <div className="flex-1 p-6 flex flex-col gap-2">
               {navItems.map((item, i) => (
                 <motion.button
-  type="button"
-  key={`mobile-${item}`}
-  initial={{ opacity: 0, x: 20 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ delay: i * 0.05 }}
-  onClick={(e) => {
-    e.preventDefault();
-    scrollTo(i);
-  }}
-  className="text-base font-medium text-muted-foreground hover:text-primary hover:bg-muted rounded-xl px-4 py-3 text-start transition-all duration-200"
->
+                  type="button"
+                  key={`mobile-${item}`}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollTo(i);
+                  }}
+                  className="text-base font-medium text-muted-foreground hover:text-primary hover:bg-muted rounded-xl px-4 py-3 text-start transition-all duration-200"
+                >
                   {item}
                 </motion.button>
               ))}

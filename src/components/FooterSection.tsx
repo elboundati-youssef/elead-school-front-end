@@ -1,6 +1,6 @@
 import { useI18n } from "@/lib/i18n";
 import { MapPin, Phone, Mail, Instagram } from "lucide-react";
-
+import logoImg from "@/assets/logo2222.png";
 const FooterSection = () => {
   const { t } = useI18n();
   // Année dynamique (passera automatiquement à 2026, 2027...)
@@ -12,7 +12,11 @@ const FooterSection = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="font-display text-2xl font-bold text-primary-foreground mb-1">
-              ELEAD<span className="text-secondary"> School</span>
+              <img
+              src={logoImg}
+              alt="Logo Elead School"
+              className="h-12 md:h-14 w-auto object-contain"
+            />
             </h3>
             <p className="font-script text-accent text-sm mb-3">Maternelle — Primaire</p>
             <p className="text-primary-foreground/70 text-sm">{t.footer.description}</p>
